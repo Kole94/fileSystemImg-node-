@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-var passportLocalMongoose = require('passport-local-mongoose');
 
 var Image = new Schema({
 
@@ -9,12 +8,11 @@ var Image = new Schema({
         default: false
     },
     price:   {
-        type: Integer,
+        type: Number,
         default: false
     }
 });
 
-Image.plugin(passportLocalMongoose);
-var Images = mongoose.model('User', Image);
+var Images = mongoose.model('Image', Image);
 
 module.exports = Images;

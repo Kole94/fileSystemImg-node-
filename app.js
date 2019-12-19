@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var newRouter = require('./routes/new');
 var uploadRouter = require('./routes/upload');
+var checkoutRouter = require('./models/Checkout');
 
 const morgan = require('morgan');
 var passport = require('passport');
@@ -46,6 +47,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/new', newRouter);
 app.use('/upload', uploadRouter);
+app.use('/checkout', checkoutRouter);
+
 
 const mongoose = require('mongoose');
 
